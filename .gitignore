@@ -1,0 +1,6 @@
+Debug/
+Release/
+MINIX Release/
+*.ncb
+*.suo
+*.user
