@@ -265,8 +265,17 @@ void write_aout(struct aout *a, const char *buf, int len, const char *src)
 		printf("CAN NOT WRITE\n");
 	else
 	{
+		int entry = a->header.a_entry;
+		if (a->textvad > 5) a->header.a_entry = 0;
 		fwrite(&a->header, sizeof(a->header), 1, f);
-		write_zero(f, a->textvad);
+		if (a->textvad > 5)
+		{
+			char jmp[5];
+			jmp[0] = 0xe9;
+			*(int *)&jmp[1] = entry - 5;
+			fwrite(jmp, 5, 1, f);
+			write_zero(f, a->textvad - 5);
+		}
 		fwrite(&buf[a->textpos], a->textlen, 1, f);
 		write_zero(f, a->header.a_text - a->textlen - a->textvad);
 		if (a->datalen > 0)
