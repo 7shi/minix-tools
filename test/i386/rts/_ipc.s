@@ -3,16 +3,16 @@
 ;.sect text; .sect .rom; .sect .data; .sect .bss
 PUBLIC __notify, __send, __sendnb, __receive, __sendrec 
 
-;! See src/kernel/ipc.h for C definitions
+; See src/kernel/ipc.h for C definitions
 SEND = 1
 RECEIVE = 2
 SENDREC = 3 
 NOTIFY = 4
 SENDNB = 5
-SYSVEC = 33			;! trap to kernel 
+SYSVEC = 33			; trap to kernel 
 
-SRC_DST = 8			;! source/ destination process 
-MESSAGE = 12			;! message pointer 
+SRC_DST = 8			; source/ destination process 
+MESSAGE = 12			; message pointer 
 
 ;*========================================================================*
 ;                           IPC assembly routines			  *
