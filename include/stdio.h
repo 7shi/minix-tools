@@ -71,7 +71,9 @@ typedef struct __iobuf {
 #define	stderr		(&__stderr)
 
 #define	BUFSIZ		4096
+#ifndef NULL
 #define NULL 0
+#endif
 #define	EOF		(-1)
 
 #define	FOPEN_MAX	20

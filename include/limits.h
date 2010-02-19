@@ -1,126 +1,110 @@
-/* This administrivia gets added to the beginning of limits.h
-   if the system has its own version of limits.h.  */
+/* The <limits.h> header defines some basic sizes, both of the language types 
+ * (e.g., the number of bits in an integer), and of the operating system (e.g.
+ * the number of characters in a file name.
+ */
 
-/* We use _GCC_LIMITS_H_ because we want this not to match
-   any macros that the system's limits.h uses for its own purposes.  */
-#ifndef _GCC_LIMITS_H_  /* Terminated in limity.h.  */
-#define _GCC_LIMITS_H_
+#ifndef _LIMITS_H
+#define _LIMITS_H
 
-#ifndef _LIBC_LIMITS_H_
-/* Use "..." so that we find syslimits.h only in this same directory.  */
-#include "syslimits.h"
+/* Definitions about chars (8 bits in MINIX, and signed). */
+#define CHAR_BIT           8	/* # bits in a char */
+#define CHAR_MIN        -128	/* minimum value of a char */
+#define CHAR_MAX         127	/* maximum value of a char */
+#define SCHAR_MIN       -128	/* minimum value of a signed char */
+#define SCHAR_MAX        127	/* maximum value of a signed char */
+#define UCHAR_MAX        255	/* maximum value of an unsigned char */
+#define MB_LEN_MAX         1	/* maximum length of a multibyte char */
+
+/* Definitions about shorts (16 bits in MINIX). */
+#define SHRT_MIN  (-32767-1)	/* minimum value of a short */
+#define SHRT_MAX       32767	/* maximum value of a short */
+#define USHRT_MAX     0xFFFF	/* maximum value of unsigned short */
+
+/* _EM_WSIZE is a compiler-generated symbol giving the word size in bytes. */
+#if _EM_WSIZE == 2
+#define INT_MIN   (-32767-1)	/* minimum value of a 16-bit int */
+#define INT_MAX        32767	/* maximum value of a 16-bit int */
+#define UINT_MAX      0xFFFF	/* maximum value of an unsigned 16-bit int */
 #endif
-#ifndef _LIMITS_H___
-#define _LIMITS_H___
 
-/* Number of bits in a `char'.  */
-#undef CHAR_BIT
-#define CHAR_BIT __CHAR_BIT__
-
-/* Maximum length of a multibyte character.  */
-#ifndef MB_LEN_MAX
-#define MB_LEN_MAX 1
+#if _EM_WSIZE == 4
+#define INT_MIN (-2147483647-1)	/* minimum value of a 32-bit int */
+#define INT_MAX   2147483647	/* maximum value of a 32-bit int */
+#define UINT_MAX  0xFFFFFFFF	/* maximum value of an unsigned 32-bit int */
 #endif
 
-/* Minimum and maximum values a `signed char' can hold.  */
-#undef SCHAR_MIN
-#define SCHAR_MIN (-SCHAR_MAX - 1)
-#undef SCHAR_MAX
-#define SCHAR_MAX __SCHAR_MAX__
+/*Definitions about longs (32 bits in MINIX). */
+#define LONG_MIN (-2147483647L-1)/* minimum value of a long */
+#define LONG_MAX  2147483647L	/* maximum value of a long */
+#define ULONG_MAX 0xFFFFFFFFL	/* maximum value of an unsigned long */
 
-/* Maximum value an `unsigned char' can hold.  (Minimum is 0).  */
-#undef UCHAR_MAX
-#if __SCHAR_MAX__ == __INT_MAX__
-# define UCHAR_MAX (SCHAR_MAX * 2U + 1U)
+/*Definitions about long longs (64 bits, may not be supported). */
+#ifdef __LONG_LONG_SUPPORTED
+#define LLONG_MIN  (-0x7FFFFFFFFFFFFFFFLL-1)	/* minimum value of a 
+						 * long long 
+						 */
+#define LLONG_MAX  0x7FFFFFFFFFFFFFFFLL		/* maximum value of a 
+						 * long long 
+						 */
+#define ULLONG_MAX 0xFFFFFFFFFFFFFFFFULL	/* maximum value of an
+						 * unsigned long long
+						 */
+#endif
+
+#include <minix/dir.h>
+
+/* Minimum sizes required by the POSIX P1003.1 standard (Table 2-3). */
+#ifdef _POSIX_SOURCE		/* these are only visible for POSIX */
+#define _POSIX_ARG_MAX    4096	/* exec() may have 4K worth of args */
+#define _POSIX_CHILD_MAX     6	/* a process may have 6 children */
+#define _POSIX_LINK_MAX      8	/* a file may have 8 links */
+#define _POSIX_MAX_CANON   255	/* size of the canonical input queue */
+#define _POSIX_MAX_INPUT   255	/* you can type 255 chars ahead */
+#define _POSIX_NAME_MAX DIRSIZ	/* max. file name length */
+#define _POSIX_NGROUPS_MAX   8	/* max. number of supplemental groups */
+#define _POSIX_OPEN_MAX     16	/* a process may have 16 files open */
+#define _POSIX_PATH_MAX    255	/* a pathname may contain 255 chars */
+#define _POSIX_PIPE_BUF    512	/* pipes writes of 512 bytes must be atomic */
+#define _POSIX_STREAM_MAX    8	/* at least 8 FILEs can be open at once */
+#define _POSIX_TZNAME_MAX    3	/* time zone names can be at least 3 chars */
+#define _POSIX_SSIZE_MAX 32767	/* read() must support 32767 byte reads */
+#define _POSIX_SYMLOOP_MAX   8	/* The number of symbolic links that can be
+				 * traversed in the resolution of a pathname
+				 * in the absence of a loop.
+				 */
+#define _POSIX_SYMLINK_MAX 255	/* The number of bytes in a symbolic link */
+
+/* Values actually implemented by MINIX (Tables 2-4, 2-5, 2-6, and 2-7). */
+/* Some of these old names had better be defined when not POSIX. */
+#define _NO_LIMIT          100	/* arbitrary number; limit not enforced */
+
+#define NGROUPS_MAX          8	/* max. number of supplemental groups */
+#if _EM_WSIZE > 2
+#define ARG_MAX          262144 /* # bytes of args + environ for exec() */
 #else
-# define UCHAR_MAX (SCHAR_MAX * 2 + 1)
+#define ARG_MAX           4096	/* args + environ on small machines */
 #endif
-
-/* Minimum and maximum values a `char' can hold.  */
-#ifdef __CHAR_UNSIGNED__
-# undef CHAR_MIN
-# if __SCHAR_MAX__ == __INT_MAX__
-#  define CHAR_MIN 0U
-# else
-#  define CHAR_MIN 0
-# endif
-# undef CHAR_MAX
-# define CHAR_MAX UCHAR_MAX
-#else
-# undef CHAR_MIN
-# define CHAR_MIN SCHAR_MIN
-# undef CHAR_MAX
-# define CHAR_MAX SCHAR_MAX
+#define CHILD_MAX    _NO_LIMIT	/* MINIX does not limit children */
+#define OPEN_MAX            30	/* # open files a process may have */
+#if 0			/* V1 file system */
+#define LINK_MAX      CHAR_MAX	/* # links a file may have */
+#else			/* V2 or better file system */
+#define LINK_MAX      SHRT_MAX	/* # links a file may have */
 #endif
+#define MAX_CANON          255	/* size of the canonical input queue */
+#define MAX_INPUT          255	/* size of the type-ahead buffer */
+#define NAME_MAX        DIRSIZ	/* # chars in a file name */
+#define PATH_MAX           255	/* # chars in a path name */
+#define PIPE_BUF          7168	/* # bytes in atomic write to a pipe */
+#define STREAM_MAX          20	/* must be the same as FOPEN_MAX in stdio.h */
+#define TZNAME_MAX           3	/* maximum bytes in a time zone name is 3 */
+#define SSIZE_MAX        32767	/* max defined byte count for read() */
+#define SYMLINK_MAX       1024 	/* # bytes in a symbolic link */ 
+#define SYMLOOP_MAX	    16	/* maximum number of symbolic links that can
+				 * be reliably traversed in the resolution of
+				 * a pathname in the absence of a loop.
+				 */
+#define IOV_MAX        INT_MAX  /* maximum number of buffers for readv/writev */
+#endif /* _POSIX_SOURCE */
 
-/* Minimum and maximum values a `signed short int' can hold.  */
-#undef SHRT_MIN
-#define SHRT_MIN (-SHRT_MAX - 1)
-#undef SHRT_MAX
-#define SHRT_MAX __SHRT_MAX__
-
-/* Maximum value an `unsigned short int' can hold.  (Minimum is 0).  */
-#undef USHRT_MAX
-#if __SHRT_MAX__ == __INT_MAX__
-# define USHRT_MAX (SHRT_MAX * 2U + 1U)
-#else
-# define USHRT_MAX (SHRT_MAX * 2 + 1)
-#endif
-
-/* Minimum and maximum values a `signed int' can hold.  */
-#undef INT_MIN
-#define INT_MIN (-INT_MAX - 1)
-#undef INT_MAX
-#define INT_MAX __INT_MAX__
-
-/* Maximum value an `unsigned int' can hold.  (Minimum is 0).  */
-#undef UINT_MAX
-#define UINT_MAX (INT_MAX * 2U + 1U)
-
-/* Minimum and maximum values a `signed long int' can hold.
-   (Same as `int').  */
-#undef LONG_MIN
-#define LONG_MIN (-LONG_MAX - 1L)
-#undef LONG_MAX
-#define LONG_MAX __LONG_MAX__
-
-/* Maximum value an `unsigned long int' can hold.  (Minimum is 0).  */
-#undef ULONG_MAX
-#define ULONG_MAX (LONG_MAX * 2UL + 1UL)
-
-#if defined (__STDC_VERSION__) && __STDC_VERSION__ >= 199901L
-/* Minimum and maximum values a `signed long long int' can hold.  */
-# undef LLONG_MIN
-# define LLONG_MIN (-LLONG_MAX - 1LL)
-# undef LLONG_MAX
-# define LLONG_MAX __LONG_LONG_MAX__
-
-/* Maximum value an `unsigned long long int' can hold.  (Minimum is 0).  */
-# undef ULLONG_MAX
-# define ULLONG_MAX (LLONG_MAX * 2ULL + 1ULL)
-#endif
-
-#if defined (__GNU_LIBRARY__) ? defined (__USE_GNU) : !defined (__STRICT_ANSI__)
-/* Minimum and maximum values a `signed long long int' can hold.  */
-# undef LONG_LONG_MIN
-# define LONG_LONG_MIN (-LONG_LONG_MAX - 1LL)
-# undef LONG_LONG_MAX
-# define LONG_LONG_MAX __LONG_LONG_MAX__
-
-/* Maximum value an `unsigned long long int' can hold.  (Minimum is 0).  */
-# undef ULONG_LONG_MAX
-# define ULONG_LONG_MAX (LONG_LONG_MAX * 2ULL + 1ULL)
-#endif
-
-#endif /* _LIMITS_H___ */
-/* This administrivia gets added to the end of limits.h
-   if the system has its own version of limits.h.  */
-
-#else /* not _GCC_LIMITS_H_ */
-
-#if 0
-/*#ifdef _GCC_NEXT_LIMITS_H*/
-#include_next <limits.h>		/* recurse down to the real one */
-#endif
-
-#endif /* not _GCC_LIMITS_H_ */
+#endif /* _LIMITS_H */

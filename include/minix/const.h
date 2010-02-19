@@ -15,6 +15,9 @@
 
 #define SUPER_USER (uid_t) 0	/* uid_t of superuser */
 
+#ifdef NULL
+#undef NULL
+#endif
 #define NULL     ((void *)0)	/* null pointer */
 #define SCPVEC_NR	  64	/* max # of entries in a SYS_VSAFECOPY* request */
 #define NR_IOREQS	  64

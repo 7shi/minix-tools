@@ -31,7 +31,9 @@
 #define CLK_TCK CLOCKS_PER_SEC	/* obsolescent mame for CLOCKS_PER_SEC */
 #endif
 
+#ifndef NULL
 #define NULL 0
+#endif
 
 #ifndef _SIZE_T
 #define _SIZE_T

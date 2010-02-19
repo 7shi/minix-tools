@@ -15,6 +15,13 @@
 #endif
 #include <minix/sys_config.h>
 
+#ifndef _WORD_SIZE
+#define _WORD_SIZE 4
+#endif
+#ifndef _PTR_SIZE
+#define _PTR_SIZE 4
+#endif
+
 #if (_WORD_SIZE != 2 && _WORD_SIZE != 4) || \
 	(_PTR_SIZE != _WORD_SIZE && _PTR_SIZE != 2*_WORD_SIZE)
 #error Odd word or pointer sizes

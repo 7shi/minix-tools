@@ -21,7 +21,9 @@
 #endif /* _PARAMS */
 #define _STRING_H
 
+#ifndef NULL
 #define NULL 0
+#endif
 
 #ifndef _SIZE_T
 #define _SIZE_T

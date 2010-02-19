@@ -24,7 +24,9 @@
 #endif
 
 /* The macros are NULL, EXIT_FAILURE, EXIT_SUCCESS, RAND_MAX, and MB_CUR_MAX.*/
+#ifndef NULL
 #define NULL 0
+#endif
 
 #define EXIT_FAILURE       1	/* standard error return using exit() */
 #define EXIT_SUCCESS       0	/* successful return using exit() */
@@ -53,7 +55,7 @@ typedef __SIZE_TYPE__ size_t;
 #if !defined(_GCC_WCHAR_T) && ! defined(__cplusplus)
 #define _GCC_WCHAR_T
 #ifndef __WCHAR_TYPE__
-#define __WCHAR_TYPE__ int
+#define __WCHAR_TYPE__ char
 #endif
 typedef __WCHAR_TYPE__ wchar_t;
 #endif
