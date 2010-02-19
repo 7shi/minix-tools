@@ -45,6 +45,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)include&quot;"
 				IgnoreStandardIncludePath="true"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
@@ -107,8 +108,33 @@
 	<References>
 	</References>
 	<Files>
+		<Filter
+			Name="lib"
+			>
+			<File
+				RelativePath=".\posix\__exit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\i386\rts\_ipc.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(OutDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+						Outputs="$(OutDir)\$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\other\syscall.c"
+				>
+			</File>
+		</Filter>
 		<File
-			RelativePath=".\exit.c"
+			RelativePath=".\main.c"
 			>
 		</File>
 	</Files>
