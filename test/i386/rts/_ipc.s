@@ -1,6 +1,6 @@
 .386
 .MODEL FLAT
-;.sect .text; .sect .rom; .sect .data; .sect .bss
+;.sect text; .sect .rom; .sect .data; .sect .bss
 PUBLIC __notify, __send, __sendnb, __receive, __sendrec 
 
 ;! See src/kernel/ipc.h for C definitions
