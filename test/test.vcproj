@@ -44,8 +44,11 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="2"
+				InlineFunctionExpansion="1"
 				EnableIntrinsicFunctions="true"
+				WholeProgramOptimization="true"
 				AdditionalIncludeDirectories="&quot;$(SolutionDir)include&quot;"
+				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
 				IgnoreStandardIncludePath="true"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
@@ -69,6 +72,7 @@
 				LinkIncremental="1"
 				GenerateManifest="false"
 				IgnoreAllDefaultLibraries="true"
+				IgnoreDefaultLibraryNames=""
 				GenerateDebugInformation="false"
 				GenerateMapFile="true"
 				SubSystem="3"
@@ -79,6 +83,7 @@
 				BaseAddress="0"
 				RandomizedBaseAddress="1"
 				FixedBaseAddress="2"
+				MergeSections=".rdata=.data"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -112,10 +117,6 @@
 			Name="lib"
 			>
 			<File
-				RelativePath=".\posix\__exit.c"
-				>
-			</File>
-			<File
 				RelativePath=".\i386\rts\_ipc.s"
 				>
 				<FileConfiguration
@@ -123,14 +124,3132 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml /c /coff /Zi /Fo&quot;$(OutDir)\$(InputName).obj&quot; &quot;$(InputPath)&quot;"
-						Outputs="$(OutDir)\$(InputName).obj"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 					/>
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\i386\string\_memmove.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\i386\int64\ex64.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\i386\int64\make64.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\i386\string\memcpy.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\i386\string\memset.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\sanos\ulldvrm.asm"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+		</Filter>
+		<Filter
+			Name="stdio"
+			>
+			<File
+				RelativePath=".\stdio\clearerr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\data.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\doprnt.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\doscan.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\ecvt.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fclose.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\feof.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\ferror.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fflush.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fgetc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fgetpos.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fgets.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fileno.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fillbuf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\flushbuf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fopen.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fprintf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fputc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fputs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fread.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\freopen.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fscanf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fseek.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fsetpos.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\ftell.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\fwrite.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\getc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\getchar.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\gets.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\icompute.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\loc_incl.h"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\mktemp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\perror.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\printf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\putc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\putchar.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\puts.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\remove.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\rewind.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\scanf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\setbuf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\setvbuf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\sprintf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\sscanf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\tmpfile.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\tmpnam.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\ungetc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\vfprintf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\vprintf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\vscanf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\vsprintf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\stdio\vsscanf.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="ansi"
+			>
+			<File
+				RelativePath=".\ansi\abort.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\abs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\assert.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\atexit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\atof.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\atoi.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\atol.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\bsearch.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\calloc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\chartab.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\clock.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\difftime.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\div.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\errlist.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\exit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\ext_comp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\ext_fmt.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\getenv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isalnum.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isalpha.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isascii.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\iscntrl.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isdigit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isgraph.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\islower.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isprint.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\ispunct.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isspace.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isupper.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\isxdigit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\labs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\ldiv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\loc_time.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\localeconv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\malloc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\mblen.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\mbstowcs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\mbtowc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\memchr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\memcmp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\memcpy.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\memmove.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\memset.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\misc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\qsort.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\raise.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\rand.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\setlocale.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\sigmisc.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\signal.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strcat.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strchr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strcmp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strcoll.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strcpy.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strcspn.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strerror.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strlen.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strncat.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strncmp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strncpy.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strpbrk.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strrchr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strspn.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strstr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strtok.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strtol.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\strxfrm.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\system.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\tolower.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\toupper.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\wcstombs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ansi\wctomb.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="other"
+			>
+			<File
+				RelativePath=".\other\_adddma.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_brk.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_cprofile.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_deldma.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getdents.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getdma.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getngid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getnpid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getnprocnr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getnuid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getpprocnr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getprocnr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getsigset.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_getsysinfo.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_lseek64.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_mapdriver.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_mount.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_reboot.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_sbrk.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_seekdir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_setgroups.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_sprofile.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_svrctl.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_sysuname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_vm_dmacalls.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_vm_query_exit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\_vm_set_priv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\asynchio.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\basename.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\bcmp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\bcopy.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\bzero.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\configfile.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\crypt.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\ctermid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\cuserid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\dirname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\environ.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\errno.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\fdopen.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\ffs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\flock.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\fslib.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\fsversion.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\fts.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getgrent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getlogin.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getopt_long.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getpagesize.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getpass.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getpwent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getttyent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\getw.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\hypot.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\index.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\initgroups.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\itoa.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\loadname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\lock.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\lrand.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\lsearch.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\memccpy.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\minix_rs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\mstats.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\mtab.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\namespace.h"
+				>
+			</File>
+			<File
+				RelativePath=".\other\nlist.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\paramvalue.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\peekpoke.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\popen.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\putenv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\putw.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\random.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\realpath.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\rindex.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\rlimit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\setenv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\settimeofday.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\stderr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\strdup.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\strlcat.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\strlcpy.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\strtok_r.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\strtoll.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\swab.c"
+				>
+			</File>
+			<File
 				RelativePath=".\other\syscall.c"
 				>
+			</File>
+			<File
+				RelativePath=".\other\sysconf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\syslog.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\telldir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\termcap.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\ttyname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\ttyslot.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\un-namespace.h"
+				>
+			</File>
+			<File
+				RelativePath=".\other\v8regerror.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\v8regexp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\v8regsub.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\vectorio.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\vwarnx.c"
+				>
+			</File>
+			<File
+				RelativePath=".\other\warnx.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="posix"
+			>
+			<File
+				RelativePath=".\posix\__exit.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_access.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_alarm.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_cfgetispeed.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_cfgetospeed.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_cfsetispeed.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_cfsetospeed.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_chdir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_chmod.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_chown.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_chroot.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_close.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_closedir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_creat.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_dup.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_dup2.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_execl.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_execle.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_execlp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_execv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_execve.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_execvp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fchmod.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fchown.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fcntl.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fork.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fpathconf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fstat.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fstatfs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_fsync.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getcwd.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getegid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_geteuid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getgid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getgroups.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getitimer.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getpgrp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getpid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getppid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_getuid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_ioctl.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_isatty.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_kill.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_killpg.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_link.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_lseek.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_lstat.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_mkdir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_mkfifo.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_mknod.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_mmap.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_nanosleep.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_open.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_opendir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_pathconf.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_pause.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_pipe.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_ptrace.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_read.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_readdir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_readlink.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_rename.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_rewinddir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_rmdir.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_select.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_setgid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_setitimer.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_setsid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_setuid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sigaction.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sigpending.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sigprocmask.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sigreturn.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sigset.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sigsuspend.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sleep.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_stat.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_stime.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_symlink.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_sync.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_tcdrain.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_tcflow.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_tcflush.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_tcgetattr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_tcsendbreak.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_tcsetattr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_time.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_times.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_truncate.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_umask.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_uname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_unlink.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_utime.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_wait.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_waitpid.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\_write.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\getloadavg.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\getopt.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\gettimeofday.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\glob.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\nice.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\priority.c"
+				>
+			</File>
+			<File
+				RelativePath=".\posix\usleep.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="syscall"
+			>
+			<File
+				RelativePath=".\syscall\_exit.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\_pm_findproc.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\access.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\adddma.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\alarm.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\brk.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\cfgetispeed.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\cfgetospeed.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\cfsetispeed.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\cfsetospeed.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\chdir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\chmod.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\chown.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\chroot.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\close.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\closedir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\cprofile.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\creat.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\deldma.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\dup.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\dup2.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\execl.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\execle.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\execlp.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\execv.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\execve.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\execvp.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\fchmod.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\fchown.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\fcntl.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\fork.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\fpathconf.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\fstat.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\fstatfs.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getcwd.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getdents.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getdma.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getegid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\geteuid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getgid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getgroups.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getitimer.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getngid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getnpid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getnprocnr.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getnuid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getpgrp.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getpid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getppid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getpprocnr.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getprocnr.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getsigset.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getsysinfo.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\getuid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\ioctl.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\isatty.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\kill.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\killpg.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\link.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\lseek.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\lseek64.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\lstat.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\mapdriver.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\mkdir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\mkfifo.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\mknod.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\mmap.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\mount.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\nanosleep.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\open.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\opendir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\pathconf.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\pause.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\pipe.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\ptrace.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\read.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\readdir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\readlink.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\reboot.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\rename.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\rewinddir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\rmdir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sbrk.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\seekdir.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\select.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\setgid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\setgroups.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\setitimer.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\setsid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\setuid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigaction.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigaddset.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigdelset.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigemptyset.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigfillset.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigismember.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigpending.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigprocmask.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigreturn.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sigsuspend.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sleep.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sprofile.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\stat.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\stime.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\svrctl.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\symlink.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sync.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\sysuname.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\tcdrain.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\tcflow.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\tcflush.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\tcgetattr.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\tcsendbreak.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\tcsetattr.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\time.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\times.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\truncate.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\umask.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\umount.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\uname.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\unlink.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\utime.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\vm_dmacalls.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\vm_getphys.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\vm_getrefcount.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\vm_query_exit.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\vm_remap.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\vm_set_priv.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\vm_unmap.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\wait.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\waitpid.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\syscall\write.s"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 		<File

@@ -1,8 +1,15 @@
+#include <stdio.h>
 #include <stdlib.h>
 
-int errno;
+int _penviron, _brksize;
+
+void _f_print() {}
+double strtod(const char *_nptr, char **_endptr) { return 0; }
+void __sigreturn() {}
+void __pm_findproc() {}
 
 void start()
 {
-	__exit(42);
+	printf("Hello, World!\n");
+	exit(0);
 }
