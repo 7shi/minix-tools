@@ -3,7 +3,7 @@
 	ProjectType="Visual C++"
 	Version="9.00"
 	Name="test"
-	ProjectGUID="{01A8A024-FA22-4154-BA2F-B13828ED2248}"
+	ProjectGUID="{D527055B-AFE0-48CC-BF11-3E49386453AE}"
 	RootNamespace="test"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
@@ -17,20 +17,17 @@
 	</ToolFiles>
 	<Configurations>
 		<Configuration
-			Name="MINIX Release|Win32"
+			Name="Debug|Win32"
 			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
 			IntermediateDirectory="$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="1"
-			WholeProgramOptimization="1"
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
-				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; &quot;$(TargetPath)&quot;&#x0D;&#x0A;"
-				Outputs="$(OutDir)\$(ProjectName)"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -43,19 +40,14 @@
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
-				Optimization="2"
-				InlineFunctionExpansion="1"
-				EnableIntrinsicFunctions="true"
-				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)include&quot;"
-				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
-				IgnoreStandardIncludePath="true"
-				RuntimeLibrary="2"
-				BufferSecurityCheck="false"
-				EnableFunctionLevelLinking="true"
+				Optimization="0"
+				PreprocessorDefinitions="WIN32;_DEBUG;_CONSOLE"
+				MinimalRebuild="true"
+				BasicRuntimeChecks="3"
+				RuntimeLibrary="3"
 				UsePrecompiledHeader="0"
 				WarningLevel="3"
-				DebugInformationFormat="3"
+				DebugInformationFormat="4"
 			/>
 			<Tool
 				Name="VCManagedResourceCompilerTool"
@@ -68,22 +60,9 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalOptions="/ALIGN:512 &quot;$(TargetDir)crtso.o&quot;"
-				LinkIncremental="1"
-				GenerateManifest="false"
-				IgnoreAllDefaultLibraries="true"
-				IgnoreDefaultLibraryNames=""
-				GenerateDebugInformation="false"
-				GenerateMapFile="true"
-				SubSystem="3"
-				OptimizeReferences="2"
-				EnableCOMDATFolding="2"
-				OptimizeForWindows98="0"
-				EntryPointSymbol="crtso"
-				BaseAddress="0"
-				RandomizedBaseAddress="1"
-				FixedBaseAddress="2"
-				MergeSections=".rdata=.data"
+				LinkIncremental="2"
+				GenerateDebugInformation="true"
+				SubSystem="1"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -106,7 +85,158 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine=""
+			/>
+		</Configuration>
+		<Configuration
+			Name="Release|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			CharacterSet="1"
+			WholeProgramOptimization="1"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				Optimization="2"
+				EnableIntrinsicFunctions="true"
+				PreprocessorDefinitions="WIN32;NDEBUG;_CONSOLE"
+				RuntimeLibrary="2"
+				EnableFunctionLevelLinking="true"
+				UsePrecompiledHeader="0"
+				WarningLevel="3"
+				DebugInformationFormat="3"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				LinkIncremental="1"
+				GenerateDebugInformation="true"
+				SubSystem="1"
+				OptimizeReferences="2"
+				EnableCOMDATFolding="2"
+				TargetMachine="1"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
+			/>
+		</Configuration>
+		<Configuration
+			Name="MINIX Release|Win32"
+			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
+			IntermediateDirectory="$(ConfigurationName)"
+			ConfigurationType="1"
+			>
+			<Tool
+				Name="VCPreBuildEventTool"
+			/>
+			<Tool
+				Name="VCCustomBuildTool"
+				Description="PE ‚©‚ç a.out ‚É•ÏŠ·‚µ‚Ä‚¢‚Ü‚·B"
+				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; &quot;$(TargetPath)&quot;"
+				Outputs="$(OutDir)\$(ProjectName)"
+			/>
+			<Tool
+				Name="VCXMLDataGeneratorTool"
+			/>
+			<Tool
+				Name="VCWebServiceProxyGeneratorTool"
+			/>
+			<Tool
+				Name="VCMIDLTool"
+			/>
+			<Tool
+				Name="VCCLCompilerTool"
+				EnableIntrinsicFunctions="true"
+				WholeProgramOptimization="true"
+				AdditionalIncludeDirectories="&quot;$(SolutionDir)include&quot;"
+				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
+				IgnoreStandardIncludePath="true"
+				BufferSecurityCheck="false"
+				EnableFunctionLevelLinking="true"
+			/>
+			<Tool
+				Name="VCManagedResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCResourceCompilerTool"
+			/>
+			<Tool
+				Name="VCPreLinkEventTool"
+			/>
+			<Tool
+				Name="VCLinkerTool"
+				AdditionalOptions="/ALIGN:512 &quot;$(TargetDir)crtso.o&quot;"
+				GenerateManifest="false"
+				IgnoreAllDefaultLibraries="true"
+				GenerateMapFile="true"
+				SubSystem="3"
+				EntryPointSymbol="crtso"
+				BaseAddress="0"
+				RandomizedBaseAddress="1"
+				FixedBaseAddress="2"
+				MergeSections=".rdata=.data"
+			/>
+			<Tool
+				Name="VCALinkTool"
+			/>
+			<Tool
+				Name="VCManifestTool"
+			/>
+			<Tool
+				Name="VCXDCMakeTool"
+			/>
+			<Tool
+				Name="VCBscMakeTool"
+			/>
+			<Tool
+				Name="VCFxCopTool"
+			/>
+			<Tool
+				Name="VCAppVerifierTool"
+			/>
+			<Tool
+				Name="VCPostBuildEventTool"
 			/>
 		</Configuration>
 	</Configurations>

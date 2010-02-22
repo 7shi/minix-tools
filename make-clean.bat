@@ -11,6 +11,8 @@ rd /s /q aout-tool\Debug
 rd /s /q aout-tool\Release
 rd /s /q pe2aout\Debug
 rd /s /q pe2aout\Release
+rd /s /q test\Debug
+rd /s /q test\Release
 
 rd /s /q "MINIX Release"
 rd /s /q "libc\MINIX Release"
