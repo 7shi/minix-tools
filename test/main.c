@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int _penviron;
-
-void start()
+int main(int argc, char *argv[], char *envp[])
 {
-	printf("Hello, World!\n");
-	exit(0);
+	int i;
+	printf("argc = %d\n", argc);
+	for (i = 0; i < argc; i++)
+		printf("argv[%d] = %s\n", i, argv[i]);
+	for (i = 0; envp[i] != NULL; i++)
+		printf("envp[%d] = %s\n", i, envp[i]);
+	return 0;
 }

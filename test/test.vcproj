@@ -79,7 +79,7 @@
 				OptimizeReferences="2"
 				EnableCOMDATFolding="2"
 				OptimizeForWindows98="0"
-				EntryPointSymbol="start"
+				EntryPointSymbol="crtso"
 				BaseAddress="0"
 				RandomizedBaseAddress="1"
 				FixedBaseAddress="2"
@@ -3780,6 +3780,19 @@
 				</File>
 				<File
 					RelativePath=".\i386\rts\brksize.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\rts\crtso.s"
 					>
 					<FileConfiguration
 						Name="MINIX Release|Win32"
