@@ -1,12 +1,12 @@
 ;	memset()					Author: Kees J. Bot
 ;								2 Jan 1994
-;.sect .text; .sect .rom; .sect .data; .sect .bss
+;.sect text; .sect .rom; .sect .data; .sect .bss
+.386
+.MODEL FLAT
 
 ; void *memset(void *s, int c, size_t n)
 ;	Set a chunk of memory to the same byte value.
 ;
-.386
-.MODEL FLAT
 .CODE
 PUBLIC _memset
 	;ALIGN 16

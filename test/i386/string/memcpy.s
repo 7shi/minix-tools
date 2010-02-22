@@ -1,6 +1,8 @@
 ;	memcpy()					Author: Kees J. Bot
 ;								2 Jan 1994
-;.sect .text; .sect .rom; .sect .data; .sect .bss
+;.sect text; .sect .rom; .sect .data; .sect .bss
+.386
+.MODEL FLAT
 
 ; void *memcpy(void *s1, const void *s2, size_t n)
 ;	Copy a chunk of memory.
@@ -9,8 +11,6 @@
 ;	negligible, but you are dealing with a programmer who believes that
 ;	if anything can go wrong, it should go wrong.
 ;
-.386
-.MODEL FLAT
 .CODE
 EXTERN __memcpy:NEAR
 PUBLIC _memcpy

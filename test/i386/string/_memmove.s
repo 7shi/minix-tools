@@ -1,12 +1,12 @@
 ;	_memmove()					Author: Kees J. Bot
 ;								2 Jan 1994
-;.sect .text; .sect .rom; .sect .data; .sect .bss
+;.sect text; .sect .rom; .sect .data; .sect .bss
+.386
+.MODEL FLAT
 
 ; void *_memmove(void *s1, const void *s2, size_t n)
 ;	Copy a chunk of memory.  Handle overlap.
 ;
-.386
-.MODEL FLAT
 .CODE
 PUBLIC __memmove, __memcpy
 	;ALIGN 16
