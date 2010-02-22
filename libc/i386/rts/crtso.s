@@ -9,9 +9,9 @@
 ; way.
 
 ;#include <sys/vm_i386.h>
-;
-;.sect .text; .sect .rom; .sect .data; .sect .bss
 I386_PAGE_SIZE=4096
+
+;.sect .text; .sect .rom; .sect .data; .sect .bss
 
 ;.define begtext, begdata, begbss
 ;.sect .text
