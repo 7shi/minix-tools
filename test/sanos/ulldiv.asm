@@ -1,19 +1,19 @@
 ;-----------------------------------------------------------------------------
-; ulldvrm.asm - unsigned long divide and remainder routine
+; ulldiv.asm - unsigned long divide routine
 ;-----------------------------------------------------------------------------
                 .386
 _TEXT           segment use32 para public 'CODE'
-                public  __aulldvrm
+                public  __aulldiv
 
 LOWORD  equ     [0]
 HIWORD  equ     [4]
 
 ;
-; ulldvrm - unsigned long divide and remainder
+; ulldiv - unsigned long divide
 ;
 ; Purpose:
-;       Does a unsigned long divide and remainder of the arguments.  Arguments
-;       are not changed.
+;       Does a unsigned long divide of the arguments.  Arguments are
+;       not changed.
 ;
 ; Entry:
 ;       Arguments are passed on the stack:
@@ -22,21 +22,21 @@ HIWORD  equ     [4]
 ;
 ; Exit:
 ;       EDX:EAX contains the quotient (dividend/divisor)
-;       EBX:ECX contains the remainder (divided % divisor)
 ;       NOTE: this routine removes the parameters from the stack.
 ;
 ; Uses:
 ;       ECX
 ;
 
-__aulldvrm      proc    near
+__aulldiv       proc    near
                 assume  cs:_TEXT
 
+        push    ebx
         push    esi
 
 ; Set up the local stack and save the index registers.  When this is done
 ; the stack frame will look as follows (assuming that the expression a/b will
-; generate a call to aulldvrm(a, b)):
+; generate a call to uldiv(a, b)):
 ;
 ;               -----------------
 ;               |               |
@@ -51,12 +51,14 @@ __aulldvrm      proc    near
 ;               |---------------|
 ;               | return addr** |
 ;               |---------------|
+;               |      EBX      |
+;               |---------------|
 ;       ESP---->|      ESI      |
 ;               -----------------
 ;
 
-DVND    equ     [esp + 8]       ; stack address of dividend (a)
-DVSR    equ     [esp + 16]      ; stack address of divisor (b)
+DVND    equ     [esp + 12]      ; stack address of dividend (a)
+DVSR    equ     [esp + 20]      ; stack address of divisor (b)
 
 ;
 ; Now do the divide.  First look to see if the divisor is less than 4194304K.
@@ -74,18 +76,8 @@ DVSR    equ     [esp + 16]      ; stack address of divisor (b)
         mov     ebx,eax         ; save high bits of quotient
         mov     eax,LOWORD(DVND) ; edx:eax <- remainder:lo word of dividend
         div     ecx             ; get low order bits of quotient
-        mov     esi,eax         ; ebx:esi <- quotient
-
-;
-; Now we need to do a multiply so that we can compute the remainder.
-;
-        mov     eax,ebx         ; set up high word of quotient
-        mul     dword ptr LOWORD(DVSR) ; HIWORD(QUOT) * DVSR
-        mov     ecx,eax         ; save the result in ecx
-        mov     eax,esi         ; set up low word of quotient
-        mul     dword ptr LOWORD(DVSR) ; LOWORD(QUOT) * DVSR
-        add     edx,ecx         ; EDX:EAX = QUOT * DVSR
-        jmp     short L2        ; complete remainder calculation
+        mov     edx,ebx         ; edx:eax <- quotient hi:quotient lo
+        jmp     short L2        ; restore stack and return
 
 ;
 ; Here we do it the hard way.  Remember, eax contains DVSRHI
@@ -133,42 +125,23 @@ L3:
         jbe     short L5        ; if less or equal we are ok, else subtract
 L4:
         dec     esi             ; subtract 1 from quotient
-        sub     eax,LOWORD(DVSR) ; subtract divisor from result
-        sbb     edx,HIWORD(DVSR)
 L5:
-        xor     ebx,ebx         ; ebx:esi <- quotient
-
-L2:
-;
-; Calculate remainder by subtracting the result from the original dividend.
-; Since the result is already in a register, we will do the subtract in the
-; opposite direction and negate the result.
-;
-
-        sub     eax,LOWORD(DVND) ; subtract dividend from result
-        sbb     edx,HIWORD(DVND)
-        neg     edx             ; otherwise, negate the result
-        neg     eax
-        sbb     edx,0
-
-;
-; Now we need to get the quotient into edx:eax and the remainder into ebx:ecx.
-;
-        mov     ecx,edx
-        mov     edx,ebx
-        mov     ebx,ecx
-        mov     ecx,eax
+        xor     edx,edx         ; edx:eax <- quotient
         mov     eax,esi
+
 ;
 ; Just the cleanup left to do.  edx:eax contains the quotient.
 ; Restore the saved registers and return.
 ;
 
+L2:
+
         pop     esi
+        pop     ebx
 
         ret     16
 
-__aulldvrm      endp
+__aulldiv       endp
 
 _TEXT           ends
                 end
