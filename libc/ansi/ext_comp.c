@@ -16,7 +16,6 @@
 #include	<errno.h>
 #include	<ctype.h>
 
-#ifdef ___
 static int b64_add(struct mantissa *e1, struct mantissa *e2);
 static b64_sft(struct mantissa *e1, int n);
 
@@ -742,4 +741,3 @@ _ext_dbl_cvt(struct EXTEND *e)
 	}
 	return f;
 }
-#endif
