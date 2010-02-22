@@ -114,23 +114,6 @@
 	</References>
 	<Files>
 		<Filter
-			Name="lib"
-			>
-			<File
-				RelativePath=".\i386\rts\_ipc.s"
-				>
-				<FileConfiguration
-					Name="MINIX Release|Win32"
-					>
-					<Tool
-						Name="VCCustomBuildTool"
-						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
-						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
-					/>
-				</FileConfiguration>
-			</File>
-		</Filter>
-		<Filter
 			Name="stdio"
 			>
 			<File
@@ -3741,6 +3724,62 @@
 				</File>
 				<File
 					RelativePath=".\i386\int64\sub64u.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+			</Filter>
+			<Filter
+				Name="rts"
+				>
+				<File
+					RelativePath=".\i386\rts\__sigreturn.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\rts\_ipc.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\rts\_senda.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\rts\brksize.s"
 					>
 					<FileConfiguration
 						Name="MINIX Release|Win32"
