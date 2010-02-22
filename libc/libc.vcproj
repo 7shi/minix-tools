@@ -330,11 +330,11 @@
 			Name="fphook"
 			>
 			<File
-				RelativePath="..\..\..\..\..\..\..\SFU\root\minix\usr\src\lib\fphook\fltpr.c"
+				RelativePath=".\fphook\fltpr.c"
 				>
 			</File>
 			<File
-				RelativePath="..\..\..\..\..\..\..\SFU\root\minix\usr\src\lib\fphook\strtod.c"
+				RelativePath=".\fphook\strtod.c"
 				>
 			</File>
 		</Filter>
@@ -854,7 +854,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
