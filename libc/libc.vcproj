@@ -989,7 +989,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1002,7 +1002,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1015,7 +1015,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1028,7 +1028,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1041,7 +1041,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1054,7 +1054,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1067,7 +1067,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1080,7 +1080,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1093,7 +1093,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1106,7 +1106,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1119,7 +1119,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1132,7 +1132,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1145,7 +1145,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1158,7 +1158,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1171,7 +1171,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1184,7 +1184,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1197,7 +1197,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -1210,7 +1210,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -2905,6 +2905,234 @@
 			</File>
 			<File
 				RelativePath=".\syscall\write.c"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="ip"
+			>
+			<File
+				RelativePath=".\ip\accept.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\addrinfo.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\bind.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\connect.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\dhcp_gettag.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\dhcp_settag.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\domainname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\ether.h"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\ether_line.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\ethera2n.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\ethere2a.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\etherh2n.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\ethern2h.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\gai_strerror.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getdomain.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\gethnmadr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\gethostent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\gethostname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getifaddrs.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getnetbyaddr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getnetbyname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getnetent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getpeername.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getproto.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getprotoent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getprotoname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getservent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getsockname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getsockopt.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getsrvbyname.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\getsrvbyport.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\hton.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\inet_addr.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\inet_network.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\inet_ntoa.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\listen.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\memcspn.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\nameinfo.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\oneC_sum.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\rcmd.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\recv.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\recvfrom.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\res_comp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\res_init.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\res_mkquery.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\res_query.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\res_send.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\ruserok.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\send.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\sendto.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\servxcheck.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\sethostent.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\setsockopt.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\shutdown.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\socket.c"
+				>
+			</File>
+			<File
+				RelativePath=".\ip\strcasecmp.c"
 				>
 			</File>
 		</Filter>
