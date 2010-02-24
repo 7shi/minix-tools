@@ -974,6 +974,248 @@
 					</FileConfiguration>
 				</File>
 			</Filter>
+			<Filter
+				Name="misc"
+				>
+				<File
+					RelativePath=".\i386\misc\_cpufeature.c"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\misc\_cpuid.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\alloca.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\get_bp.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\getprocessor.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_inb.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_inl.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_insb.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_insl.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_insw.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_intr.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_inw.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_outb.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_outl.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_outsb.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_outsl.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_outsw.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\io_outw.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\misc\oneC_sum.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="other"
