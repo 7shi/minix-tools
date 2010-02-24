@@ -3228,6 +3228,54 @@
 				>
 			</File>
 		</Filter>
+		<Filter
+			Name="regex"
+			>
+			<File
+				RelativePath=".\regex\cclass.h"
+				>
+			</File>
+			<File
+				RelativePath=".\regex\cname.h"
+				>
+			</File>
+			<File
+				RelativePath=".\regex\engine.c"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					ExcludedFromBuild="true"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\regex\regcomp.c"
+				>
+			</File>
+			<File
+				RelativePath=".\regex\regerror.c"
+				>
+			</File>
+			<File
+				RelativePath=".\regex\regex2.h"
+				>
+			</File>
+			<File
+				RelativePath=".\regex\regexec.c"
+				>
+			</File>
+			<File
+				RelativePath=".\regex\regfree.c"
+				>
+			</File>
+			<File
+				RelativePath=".\regex\utils.h"
+				>
+			</File>
+		</Filter>
 	</Files>
 	<Globals>
 	</Globals>
