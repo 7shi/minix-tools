@@ -3,6 +3,7 @@ del minix-tools.ncb
 del aout-tool\aout-tool.vcproj.*.user
 del pe2aout\pe2aout.vcproj.*.user
 del libc\libc.vcproj.*.user
+del libsys\libsys.vcproj.*.user
 del mfs\mfs.vcproj.*.user
 del test\test.vcproj.*.user
 
@@ -17,6 +18,7 @@ rd /s /q test\Release
 
 rd /s /q "MINIX Release"
 rd /s /q "libc\MINIX Release"
+rd /s /q "libsys\MINIX Release"
 rd /s /q "mfs\MINIX Release"
 rd /s /q "test\MINIX Release"
 pause

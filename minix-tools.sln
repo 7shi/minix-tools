@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfs", "mfs\mfs.vcproj", "{D
 		{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B} = {161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsys", "libsys\libsys.vcproj", "{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -56,6 +58,12 @@ Global
 		{DC9BDDDA-20EB-4A93-85EF-ED433805190C}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
 		{DC9BDDDA-20EB-4A93-85EF-ED433805190C}.Release|Win32.ActiveCfg = MINIX Release|Win32
 		{DC9BDDDA-20EB-4A93-85EF-ED433805190C}.Release|Win32.Build.0 = MINIX Release|Win32
+		{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}.Debug|Win32.ActiveCfg = MINIX Release|Win32
+		{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}.Debug|Win32.Build.0 = MINIX Release|Win32
+		{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}.MINIX Release|Win32.ActiveCfg = MINIX Release|Win32
+		{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
+		{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}.Release|Win32.ActiveCfg = MINIX Release|Win32
+		{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}.Release|Win32.Build.0 = MINIX Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
