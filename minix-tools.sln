@@ -4,6 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "test", "test\test.vcproj", "{D527055B-AFE0-48CC-BF11-3E49386453AE}"
 	ProjectSection(ProjectDependencies) = postProject
 		{CB10FB13-7E83-499E-BCC4-A77F84833E7B} = {CB10FB13-7E83-499E-BCC4-A77F84833E7B}
+		{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B} = {161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pe2aout", "pe2aout\pe2aout.vcproj", "{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}"

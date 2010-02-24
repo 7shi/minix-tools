@@ -899,6 +899,81 @@
 					</FileConfiguration>
 				</File>
 			</Filter>
+			<Filter
+				Name="math"
+				>
+				<File
+					RelativePath=".\i386\math\arch_compare.c"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\arch_round.c"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\fegetround.c"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\feholdexcept.c"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\fesetround.c"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\fpu_cw.h"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\fpu_cw.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\math\fpu_round.h"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\fpu_round.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\math\fpu_sw.h"
+					>
+				</File>
+				<File
+					RelativePath=".\i386\math\fpu_sw.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+			</Filter>
 		</Filter>
 		<Filter
 			Name="other"
@@ -2070,7 +2145,7 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
+						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
 						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 					/>
 				</FileConfiguration>
