@@ -476,6 +476,14 @@
 			<File
 				RelativePath=".\sysutil\kprintf.c"
 				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						PreprocessorDefinitions="__STDC__=1"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath=".\sysutil\kputc.c"
