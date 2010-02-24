@@ -43,7 +43,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="$(SolutionDir)include;$(SolutionDir)"
+				AdditionalIncludeDirectories="$(SolutionDir)include"
 				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
 				IgnoreStandardIncludePath="true"
 				RuntimeLibrary="2"
@@ -1383,10 +1383,26 @@
 			<File
 				RelativePath=".\other\fslib.c"
 				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="$(SolutionDir)"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath=".\other\fsversion.c"
 				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="$(SolutionDir)"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath=".\other\fts.c"
@@ -3274,6 +3290,58 @@
 			<File
 				RelativePath=".\regex\utils.h"
 				>
+			</File>
+		</Filter>
+		<Filter
+			Name="stdtime"
+			>
+			<File
+				RelativePath=".\stdtime\asctime.c"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="$(SolutionDir)zoneinfo"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\stdtime\ftime.c"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="$(SolutionDir)zoneinfo"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\stdtime\localtime.c"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="$(SolutionDir)zoneinfo"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\stdtime\strftime.c"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						AdditionalIncludeDirectories="$(SolutionDir)zoneinfo"
+					/>
+				</FileConfiguration>
 			</File>
 		</Filter>
 	</Files>
