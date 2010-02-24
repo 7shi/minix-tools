@@ -3344,6 +3344,22 @@
 				</FileConfiguration>
 			</File>
 		</Filter>
+		<Filter
+			Name="sysvipc"
+			>
+			<File
+				RelativePath=".\sysvipc\ftok.c"
+				>
+			</File>
+			<File
+				RelativePath=".\sysvipc\sem.c"
+				>
+			</File>
+			<File
+				RelativePath=".\sysvipc\shm.c"
+				>
+			</File>
+		</Filter>
 	</Files>
 	<Globals>
 	</Globals>
