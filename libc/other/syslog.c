@@ -66,7 +66,6 @@ static int LogFacility = LOG_USER;
 static int LogFlags = 0;
 static char TagBuffer[40] = "syslog";
 
-#ifdef ___
 /*
 ** OPENLOG -- open system log
 ** 	- establishes a channel to syslogd using UDP device
@@ -164,6 +163,5 @@ void closelog(void)
   LogFlags = 0;
   return;
 }
-#endif
 
 /** syslog.c **/

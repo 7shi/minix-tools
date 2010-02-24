@@ -1,6 +1,5 @@
 /* fslib.c - routines needed by fs and fs utilities */
 
-#ifdef ___
 #include <minix/config.h>	/* for unused stuff in <minix/type.h> :-( */
 #include <ansi.h>
 #include <limits.h>
@@ -190,4 +189,3 @@ int norm;			/* TRUE = do not swap bytes; FALSE = swap */
 		dip->d2_zone[i] = conv4(norm, (long) rip->i_zone[i]);
   }
 }
-#endif

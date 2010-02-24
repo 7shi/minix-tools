@@ -17,7 +17,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
-#ifdef ___
 #include "mfs/const.h"
 #include "mfs/type.h"
 #include "mfs/super.h"
@@ -51,4 +50,3 @@ char *dev, *prog;
   if (sp->s_magic == SUPER_V3) return(3);
   return(-1);
 }
-#endif

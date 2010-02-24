@@ -173,7 +173,7 @@
 			<Tool
 				Name="VCCustomBuildTool"
 				Description="PE ‚©‚ç a.out ‚É•ÏŠ·‚µ‚Ä‚¢‚Ü‚·B"
-				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; &quot;$(TargetPath)&quot;"
+				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; &quot;$(TargetPath)&quot;&#x0D;&#x0A;"
 				Outputs="$(OutDir)\$(ProjectName)"
 			/>
 			<Tool
@@ -189,7 +189,7 @@
 				Name="VCCLCompilerTool"
 				EnableIntrinsicFunctions="true"
 				WholeProgramOptimization="true"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)include&quot;"
+				AdditionalIncludeDirectories="$(SolutionDir)include"
 				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
 				IgnoreStandardIncludePath="true"
 				BufferSecurityCheck="false"

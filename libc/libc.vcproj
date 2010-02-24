@@ -43,7 +43,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
-				AdditionalIncludeDirectories="&quot;$(SolutionDir)include&quot;"
+				AdditionalIncludeDirectories="$(SolutionDir)include;$(SolutionDir)"
 				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
 				IgnoreStandardIncludePath="true"
 				RuntimeLibrary="2"
