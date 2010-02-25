@@ -8,6 +8,7 @@ del libsys\libsys.vcproj.*.user
 del libcurses\libcurses.vcproj.*.user
 del libeditline\libeditline.vcproj.*.user
 del libtimers\libtimers.vcproj.*.user
+del libutil\libutil.vcproj.*.user
 del mfs\mfs.vcproj.*.user
 del dec21140A\dec21140A.vcproj.*.user
 del test\test.vcproj.*.user
@@ -28,6 +29,7 @@ rd /s /q "libsys\MINIX Release"
 rd /s /q "libcurses\MINIX Release"
 rd /s /q "libeditline\MINIX Release"
 rd /s /q "libtimers\MINIX Release"
+rd /s /q "libutil\MINIX Release"
 rd /s /q "mfs\MINIX Release"
 rd /s /q "dec21140A\MINIX Release"
 rd /s /q "aout-tool\MINIX Release"

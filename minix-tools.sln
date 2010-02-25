@@ -41,6 +41,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libeditline", "libeditline\
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtimers", "libtimers\libtimers.vcproj", "{A144D173-F43A-4543-A047-AEB676A17A14}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libutil", "libutil\libutil.vcproj", "{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -114,6 +116,12 @@ Global
 		{A144D173-F43A-4543-A047-AEB676A17A14}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
 		{A144D173-F43A-4543-A047-AEB676A17A14}.Release|Win32.ActiveCfg = MINIX Release|Win32
 		{A144D173-F43A-4543-A047-AEB676A17A14}.Release|Win32.Build.0 = MINIX Release|Win32
+		{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}.Debug|Win32.ActiveCfg = MINIX Release|Win32
+		{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}.Debug|Win32.Build.0 = MINIX Release|Win32
+		{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}.MINIX Release|Win32.ActiveCfg = MINIX Release|Win32
+		{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
+		{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}.Release|Win32.ActiveCfg = MINIX Release|Win32
+		{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}.Release|Win32.Build.0 = MINIX Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
