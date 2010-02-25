@@ -39,7 +39,8 @@ crtso:
 
 	; Test if environ is in the initialized data area and is set to our
 	; magic number.  If so then it is not redefined by the user.
-	mov	ebx, _environ
+	;mov	ebx, _environ
+	lea	ebx, _environ
 	;cmp	ebx, __edata		; within initialized data?
 	;jae	_0
 	test	bl, 3			; aligned?
