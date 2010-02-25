@@ -44,7 +44,7 @@
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="$(SolutionDir)include"
-				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
+				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI,_POSIX_SOURCE"
 				IgnoreStandardIncludePath="true"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
@@ -838,6 +838,19 @@
 				Name="rts"
 				>
 				<File
+					RelativePath=".\i386\rts\__setjmp.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
 					RelativePath=".\i386\rts\__sigreturn.s"
 					>
 					<FileConfiguration
@@ -899,6 +912,19 @@
 							Name="VCCustomBuildTool"
 							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(TargetDir)$(InputName).o&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(TargetDir)$(InputName).o"
+						/>
+					</FileConfiguration>
+				</File>
+				<File
+					RelativePath=".\i386\rts\longjmp.s"
+					>
+					<FileConfiguration
+						Name="MINIX Release|Win32"
+						>
+						<Tool
+							Name="VCCustomBuildTool"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
 				</File>
