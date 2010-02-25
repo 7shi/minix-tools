@@ -101,6 +101,10 @@ typedef int bool;
 #define	A_UNDERLINE    0x1000
 #define	A_ALTCHARSET   0x2000
 
+#ifdef _MSC_VER
+#define _leave _leave_
+#endif
+
 /* Type declarations. */
 typedef struct {
   int	   _cury;			/* current pseudo-cursor */
