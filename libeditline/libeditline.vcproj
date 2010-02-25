@@ -99,6 +99,10 @@
 			>
 		</File>
 		<File
+			RelativePath=".\README"
+			>
+		</File>
+		<File
 			RelativePath=".\sysunix.c"
 			>
 		</File>

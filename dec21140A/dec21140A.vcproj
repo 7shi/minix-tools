@@ -106,6 +106,10 @@
 			RelativePath=".\dec21140A.h"
 			>
 		</File>
+		<File
+			RelativePath=".\README.txt"
+			>
+		</File>
 	</Files>
 	<Globals>
 	</Globals>
