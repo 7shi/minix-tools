@@ -56,6 +56,12 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "sh", "sh\sh.vcproj", "{1697
 		{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B} = {161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "make", "make\make.vcproj", "{6275723D-5BC3-46B2-9D31-A20AD5E35B8C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{CB10FB13-7E83-499E-BCC4-A77F84833E7B} = {CB10FB13-7E83-499E-BCC4-A77F84833E7B}
+		{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B} = {161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -147,6 +153,12 @@ Global
 		{1697B111-A169-4516-A7F4-02443BD1B2F8}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
 		{1697B111-A169-4516-A7F4-02443BD1B2F8}.Release|Win32.ActiveCfg = MINIX Release|Win32
 		{1697B111-A169-4516-A7F4-02443BD1B2F8}.Release|Win32.Build.0 = MINIX Release|Win32
+		{6275723D-5BC3-46B2-9D31-A20AD5E35B8C}.Debug|Win32.ActiveCfg = MINIX Release|Win32
+		{6275723D-5BC3-46B2-9D31-A20AD5E35B8C}.Debug|Win32.Build.0 = MINIX Release|Win32
+		{6275723D-5BC3-46B2-9D31-A20AD5E35B8C}.MINIX Release|Win32.ActiveCfg = MINIX Release|Win32
+		{6275723D-5BC3-46B2-9D31-A20AD5E35B8C}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
+		{6275723D-5BC3-46B2-9D31-A20AD5E35B8C}.Release|Win32.ActiveCfg = MINIX Release|Win32
+		{6275723D-5BC3-46B2-9D31-A20AD5E35B8C}.Release|Win32.Build.0 = MINIX Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
