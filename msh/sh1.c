@@ -47,7 +47,6 @@ register char **argv;
 	char *name, **ap;
 	int (*iof)();
 
-printf("__1\n");
 	initarea();
 	if ((ap = environ) != NULL) {
 		while (*ap)
