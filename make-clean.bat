@@ -30,5 +30,6 @@ rd /s /q "libeditline\MINIX Release"
 rd /s /q "libtimers\MINIX Release"
 rd /s /q "mfs\MINIX Release"
 rd /s /q "dec21140A\MINIX Release"
+rd /s /q "aout-tool\MINIX Release"
 rd /s /q "test\MINIX Release"
 pause
