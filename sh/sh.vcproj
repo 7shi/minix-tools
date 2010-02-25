@@ -45,7 +45,7 @@
 				EnableIntrinsicFunctions="true"
 				WholeProgramOptimization="true"
 				AdditionalIncludeDirectories="$(SolutionDir)include,$(ProjectDir),$(ProjectDir)bltin"
-				PreprocessorDefinitions="__STDC__,SHELL,EDITLINE,NO_PATHS_H,JOBS=0,,_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI,_POSIX_SOURCE"
+				PreprocessorDefinitions="__STDC__,SHELL,EDITLINE,NO_PATHS_H,JOBS=0,_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI,_POSIX_SOURCE"
 				IgnoreStandardIncludePath="true"
 				BufferSecurityCheck="false"
 				EnableFunctionLevelLinking="true"
