@@ -845,7 +845,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -923,7 +923,7 @@
 						>
 						<Tool
 							Name="VCCustomBuildTool"
-							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+							CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 							Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 						/>
 					</FileConfiguration>
@@ -2082,6 +2082,32 @@
 			<File
 				RelativePath=".\sanos\COPYING"
 				>
+			</File>
+			<File
+				RelativePath=".\sanos\fpconst.asm"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
+				RelativePath=".\sanos\ftol.asm"
+				>
+				<FileConfiguration
+					Name="MINIX Release|Win32"
+					>
+					<Tool
+						Name="VCCustomBuildTool"
+						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
+					/>
+				</FileConfiguration>
 			</File>
 			<File
 				RelativePath=".\sanos\lldiv.asm"
