@@ -29,6 +29,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dec21140A", "dec21140A\dec2
 		{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B} = {161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}
 	EndProjectSection
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "include", "include\include.vcproj", "{D4E16708-275E-4065-8279-DD0AD0E00AC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -78,6 +80,12 @@ Global
 		{CAC291FF-4290-4785-89AF-0816BDE17FA0}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
 		{CAC291FF-4290-4785-89AF-0816BDE17FA0}.Release|Win32.ActiveCfg = MINIX Release|Win32
 		{CAC291FF-4290-4785-89AF-0816BDE17FA0}.Release|Win32.Build.0 = MINIX Release|Win32
+		{D4E16708-275E-4065-8279-DD0AD0E00AC7}.Debug|Win32.ActiveCfg = MINIX Release|Win32
+		{D4E16708-275E-4065-8279-DD0AD0E00AC7}.Debug|Win32.Build.0 = MINIX Release|Win32
+		{D4E16708-275E-4065-8279-DD0AD0E00AC7}.MINIX Release|Win32.ActiveCfg = MINIX Release|Win32
+		{D4E16708-275E-4065-8279-DD0AD0E00AC7}.MINIX Release|Win32.Build.0 = MINIX Release|Win32
+		{D4E16708-275E-4065-8279-DD0AD0E00AC7}.Release|Win32.ActiveCfg = MINIX Release|Win32
+		{D4E16708-275E-4065-8279-DD0AD0E00AC7}.Release|Win32.Build.0 = MINIX Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
