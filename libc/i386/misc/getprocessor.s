@@ -23,7 +23,7 @@ _getprocessor:
 	call	flip
 	mov	eax, 486	; 486 if it didn't react
 	jz	gotprocessor
-	pushf
+	pushfd
 	pusha			; Save the world
 	mov	eax, 1
 	cpuid
@@ -37,22 +37,22 @@ direct:
 	add	eax, 86		; 586, 686, ...
 	mov	28[esp], eax	; Pass eax through
 	popa
-	popf
+	popfd
 gotprocessor:
 	leave
 	ret
 
 flip:
-	pushf			; Push eflags
+	pushfd			; Push eflags
 	pop	eax		; eax = eflags
 	mov	edx, eax	; Save original eflags
 	xor	eax, ecx	; Flip the bit to test
 	push	eax		; Push modified eflags value
-	popf			; Load modified eflags register
-	pushf
+	popfd			; Load modified eflags register
+	pushfd
 	pop	eax		; Get it again
 	push	edx
-	popf			; Restore original eflags register
+	popfd			; Restore original eflags register
 	xor	eax, edx	; See if the bit changed
 	test	eax, ecx
 	ret

@@ -21,14 +21,14 @@ next:	shl	edx, 1		; Chunks become bigger each time
 	mov	ecx, edx
 	xor	al, al		; Look for the zero at the end
 	repne scasb
-	pushf			; Remember the flags
+	pushfd			; Remember the flags
 	sub	ecx, edx
 	neg	ecx		; Some or all of the chunk
 	sub	edi, ecx	; Step back
 	mov	al, 12[ebp]	; The character to look for
 	repne scasb
 	je	found
-	popf			; Did we find the end of string earlier?
+	popfd			; Did we find the end of string earlier?
 	jne	next		; No, try again
 	xor	eax, eax	; Return NULL
 	pop	edi
