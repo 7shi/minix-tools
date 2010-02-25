@@ -211,6 +211,7 @@
 				IgnoreAllDefaultLibraries="true"
 				GenerateMapFile="true"
 				SubSystem="3"
+				LinkTimeCodeGeneration="1"
 				EntryPointSymbol="crtso"
 				BaseAddress="0"
 				RandomizedBaseAddress="1"
