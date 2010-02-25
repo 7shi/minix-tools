@@ -45,7 +45,7 @@
 				EnableIntrinsicFunctions="true"
 				WholeProgramOptimization="true"
 				AdditionalIncludeDirectories="$(SolutionDir)include"
-				PreprocessorDefinitions="NR_BUFS=1024,_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI,_POSIX_SOURCE"
+				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI,_POSIX_SOURCE"
 				IgnoreStandardIncludePath="true"
 				BufferSecurityCheck="false"
 				EnableFunctionLevelLinking="true"
