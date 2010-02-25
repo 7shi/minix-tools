@@ -11,6 +11,7 @@ del libtimers\libtimers.vcproj.*.user
 del libutil\libutil.vcproj.*.user
 del mfs\mfs.vcproj.*.user
 del dec21140A\dec21140A.vcproj.*.user
+del msh\msh.vcproj.*.user
 del test\test.vcproj.*.user
 
 rd /s /q Debug
@@ -32,6 +33,7 @@ rd /s /q "libtimers\MINIX Release"
 rd /s /q "libutil\MINIX Release"
 rd /s /q "mfs\MINIX Release"
 rd /s /q "dec21140A\MINIX Release"
+rd /s /q "msh\MINIX Release"
 rd /s /q "aout-tool\MINIX Release"
 rd /s /q "test\MINIX Release"
 pause
