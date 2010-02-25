@@ -4,7 +4,7 @@
 
 #include "shell.h"
 
-char *const sigmesg[32] = {
+char *const sigmesg[26] = {
       0,
       "Hangup",
       "Interrupt",
@@ -12,22 +12,18 @@ char *const sigmesg[32] = {
       "Illegal instruction",
       "Trace/BPT trap",
       "abort",
-      0,
+      "Bus error",
       "Floating exception",
       "Killed",
-      "Bus error",
+      "User signal 1",
       "Memory fault",
-      "Bad system call",
+      "User signal 2",
       "Broken pipe",
       "Alarm call",
       "Terminated",
-      "User signal 1",
-      "User signal 2",
+      "EMT trap",
       0,
       0,
-      0,
-      0,
-      "Poll",
       "Stopped",
       "Stopped",
       0,
@@ -35,6 +31,4 @@ char *const sigmesg[32] = {
       "Stopped (output)",
       "Virtual alarm",
       "Profiling alarm",
-      "Time limit exceeded",
-      0,
 };
