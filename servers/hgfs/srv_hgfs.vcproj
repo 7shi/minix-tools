@@ -171,8 +171,72 @@
 				RelativePath=".\write.c"
 				>
 			</File>
+		</Filter>
+		<Filter
+			Name="Headers"
+			>
+			<File
+				RelativePath=".\const.h"
+				>
+			</File>
+			<File
+				RelativePath=".\glo.h"
+				>
+			</File>
+			<File
+				RelativePath=".\inc.h"
+				>
+			</File>
+			<File
+				RelativePath=".\inode.h"
+				>
+			</File>
+			<File
+				RelativePath=".\optset.h"
+				>
+			</File>
+			<File
+				RelativePath=".\proto.h"
+				>
+			</File>
+			<File
+				RelativePath=".\type.h"
+				>
+			</File>
+		</Filter>
+		<Filter
+			Name="_libhgfs"
+			>
 			<Filter
-				Name="libhgfs"
+				Name="Headers"
+				>
+				<File
+					RelativePath=".\libhgfs\const.h"
+					>
+				</File>
+				<File
+					RelativePath=".\libhgfs\glo.h"
+					>
+				</File>
+				<File
+					RelativePath=".\libhgfs\hgfs.h"
+					>
+				</File>
+				<File
+					RelativePath=".\libhgfs\inc.h"
+					>
+				</File>
+				<File
+					RelativePath=".\libhgfs\proto.h"
+					>
+				</File>
+				<File
+					RelativePath=".\libhgfs\type.h"
+					>
+				</File>
+			</Filter>
+			<Filter
+				Name="Sources"
 				>
 				<File
 					RelativePath=".\libhgfs\backdoor.s"
@@ -225,66 +289,6 @@
 				</File>
 				<File
 					RelativePath=".\libhgfs\libhgfs_time.c"
-					>
-				</File>
-			</Filter>
-		</Filter>
-		<Filter
-			Name="Headers"
-			>
-			<File
-				RelativePath=".\const.h"
-				>
-			</File>
-			<File
-				RelativePath=".\glo.h"
-				>
-			</File>
-			<File
-				RelativePath=".\inc.h"
-				>
-			</File>
-			<File
-				RelativePath=".\inode.h"
-				>
-			</File>
-			<File
-				RelativePath=".\optset.h"
-				>
-			</File>
-			<File
-				RelativePath=".\proto.h"
-				>
-			</File>
-			<File
-				RelativePath=".\type.h"
-				>
-			</File>
-			<Filter
-				Name="libhgfs"
-				>
-				<File
-					RelativePath=".\libhgfs\const.h"
-					>
-				</File>
-				<File
-					RelativePath=".\libhgfs\glo.h"
-					>
-				</File>
-				<File
-					RelativePath=".\libhgfs\hgfs.h"
-					>
-				</File>
-				<File
-					RelativePath=".\libhgfs\inc.h"
-					>
-				</File>
-				<File
-					RelativePath=".\libhgfs\proto.h"
-					>
-				</File>
-				<File
-					RelativePath=".\libhgfs\type.h"
 					>
 				</File>
 			</Filter>
