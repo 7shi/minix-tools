@@ -10,6 +10,7 @@ del lib\editline\lib_editline.vcproj.*.user
 del lib\timers\lib_timers.vcproj.*.user
 del lib\util\lib_util.vcproj.*.user
 del servers\mfs\srv_mfs.vcproj.*.user
+del servers\ds\srv_ds.vcproj.*.user
 del drivers\dec21140A\drv_dec21140A.vcproj.*.user
 del commands\msh\cmd_msh.vcproj.*.user
 del commands\sh\cmd_sh.vcproj.*.user
@@ -34,6 +35,7 @@ rd /s /q "lib\editline\MINIX Release"
 rd /s /q "lib\timers\MINIX Release"
 rd /s /q "lib\util\MINIX Release"
 rd /s /q "servers\mfs\MINIX Release"
+rd /s /q "servers\ds\MINIX Release"
 rd /s /q "drivers\dec21140A\MINIX Release"
 rd /s /q "commands\msh\MINIX Release"
 rd /s /q "commands\sh\MINIX Release"
