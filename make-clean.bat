@@ -11,9 +11,9 @@ del lib\timers\lib_timers.vcproj.*.user
 del lib\util\lib_util.vcproj.*.user
 del servers\mfs\srv_mfs.vcproj.*.user
 del drivers\dec21140A\drv_dec21140A.vcproj.*.user
-del msh\msh.vcproj.*.user
-del sh\sh.vcproj.*.user
-del make\make.vcproj.*.user
+del commands\msh\cmd_msh.vcproj.*.user
+del commands\sh\cmd_sh.vcproj.*.user
+del commands\make\cmd_make.vcproj.*.user
 del test\test.vcproj.*.user
 
 rd /s /q Debug
@@ -35,9 +35,9 @@ rd /s /q "lib\timers\MINIX Release"
 rd /s /q "lib\util\MINIX Release"
 rd /s /q "servers\mfs\MINIX Release"
 rd /s /q "drivers\dec21140A\MINIX Release"
-rd /s /q "msh\MINIX Release"
-rd /s /q "sh\MINIX Release"
-rd /s /q "make\MINIX Release"
+rd /s /q "commands\msh\MINIX Release"
+rd /s /q "commands\sh\MINIX Release"
+rd /s /q "commands\make\MINIX Release"
 rd /s /q "aout-tool\MINIX Release"
 rd /s /q "test\MINIX Release"
 pause

@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="msh"
+	Name="cmd_msh"
 	ProjectGUID="{BE92B6DA-4F52-446E-8D3D-36413480D0C7}"
-	RootNamespace="msh"
+	RootNamespace="cmd_msh"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -29,7 +29,7 @@
 				Name="VCCustomBuildTool"
 				Description="PE ‚©‚ç a.out ‚É•ÏŠ·‚µ‚Ä‚¢‚Ü‚·B"
 				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; &quot;$(TargetPath)&quot;&#x0D;&#x0A;"
-				Outputs="$(OutDir)\$(ProjectName)"
+				Outputs="$(OutDir)\$(TargetName)"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -62,6 +62,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/ALIGN:512 &quot;$(TargetDir)crtso.o&quot;"
+				OutputFile="$(OutDir)\msh.exe"
 				GenerateManifest="false"
 				IgnoreAllDefaultLibraries="true"
 				GenerateMapFile="true"
