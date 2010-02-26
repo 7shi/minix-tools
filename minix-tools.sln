@@ -15,7 +15,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "aout-tool", "aout-tool\aout
 		{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B} = {161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libc", "libc\libc.vcproj", "{CB10FB13-7E83-499E-BCC4-A77F84833E7B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_c", "lib\c\lib_c.vcproj", "{CB10FB13-7E83-499E-BCC4-A77F84833E7B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfs", "mfs\mfs.vcproj", "{DC9BDDDA-20EB-4A93-85EF-ED433805190C}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -24,7 +24,7 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mfs", "mfs\mfs.vcproj", "{D
 		{161EC23C-26D5-4A8B-AF3B-CA5383B23B6B} = {161EC23C-26D5-4A8B-AF3B-CA5383B23B6B}
 	EndProjectSection
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libsys", "libsys\libsys.vcproj", "{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_sys", "lib\sys\lib_sys.vcproj", "{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dec21140A", "dec21140A\dec21140A.vcproj", "{CAC291FF-4290-4785-89AF-0816BDE17FA0}"
 	ProjectSection(ProjectDependencies) = postProject
@@ -35,13 +35,13 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "dec21140A", "dec21140A\dec2
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "include", "include\include.vcproj", "{D4E16708-275E-4065-8279-DD0AD0E00AC7}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libcurses", "libcurses\libcurses.vcproj", "{5B8CC542-B441-4A19-887D-1EFD06FC58B4}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_curses", "lib\curses\lib_curses.vcproj", "{5B8CC542-B441-4A19-887D-1EFD06FC58B4}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libeditline", "libeditline\libeditline.vcproj", "{732BAC33-77EE-4195-BE54-19C747455F22}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_editline", "lib\editline\lib_editline.vcproj", "{732BAC33-77EE-4195-BE54-19C747455F22}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libtimers", "libtimers\libtimers.vcproj", "{A144D173-F43A-4543-A047-AEB676A17A14}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_timers", "lib\timers\lib_timers.vcproj", "{A144D173-F43A-4543-A047-AEB676A17A14}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "libutil", "libutil\libutil.vcproj", "{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lib_util", "lib\util\lib_util.vcproj", "{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "msh", "msh\msh.vcproj", "{BE92B6DA-4F52-446E-8D3D-36413480D0C7}"
 	ProjectSection(ProjectDependencies) = postProject

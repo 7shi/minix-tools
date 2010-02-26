@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="libeditline"
-	ProjectGUID="{732BAC33-77EE-4195-BE54-19C747455F22}"
-	RootNamespace="libeditline"
+	Name="lib_util"
+	ProjectGUID="{3910DBA5-6D8F-46FE-BB06-F09320B08B9B}"
+	RootNamespace="lib_util"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -44,7 +44,7 @@
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="$(SolutionDir)include"
-				PreprocessorDefinitions="ANSI_ARROWS,HAVE_STDLIB,HAVE_TCGETATTR,HIDE,USE_DIRENT,HIST_SIZE=100,USE_TERMCAP,SYS_UNIX,_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
+				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
 				IgnoreStandardIncludePath="true"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
@@ -87,31 +87,7 @@
 	</References>
 	<Files>
 		<File
-			RelativePath=".\complete.c"
-			>
-		</File>
-		<File
-			RelativePath=".\editline.c"
-			>
-		</File>
-		<File
-			RelativePath=".\editline.h"
-			>
-		</File>
-		<File
-			RelativePath=".\README"
-			>
-		</File>
-		<File
-			RelativePath=".\sysunix.c"
-			>
-		</File>
-		<File
-			RelativePath=".\testit.c"
-			>
-		</File>
-		<File
-			RelativePath=".\unix.h"
+			RelativePath=".\openpty.c"
 			>
 		</File>
 	</Files>

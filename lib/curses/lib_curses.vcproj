@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="libcurses"
+	Name="lib_curses"
 	ProjectGUID="{5B8CC542-B441-4A19-887D-1EFD06FC58B4}"
-	RootNamespace="libcurses"
+	RootNamespace="lib_curses"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>

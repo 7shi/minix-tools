@@ -3,12 +3,12 @@ del minix-tools.ncb
 del aout-tool\aout-tool.vcproj.*.user
 del pe2aout\pe2aout.vcproj.*.user
 del include\include.vcproj.*.user
-del libc\libc.vcproj.*.user
-del libsys\libsys.vcproj.*.user
-del libcurses\libcurses.vcproj.*.user
-del libeditline\libeditline.vcproj.*.user
-del libtimers\libtimers.vcproj.*.user
-del libutil\libutil.vcproj.*.user
+del lib\c\lib_c.vcproj.*.user
+del lib\sys\lib_sys.vcproj.*.user
+del lib\curses\lib_curses.vcproj.*.user
+del lib\editline\lib_editline.vcproj.*.user
+del lib\timers\lib_timers.vcproj.*.user
+del lib\util\lib_util.vcproj.*.user
 del mfs\mfs.vcproj.*.user
 del dec21140A\dec21140A.vcproj.*.user
 del msh\msh.vcproj.*.user
@@ -27,12 +27,12 @@ rd /s /q test\Release
 
 rd /s /q "MINIX Release"
 rd /s /q "include\MINIX Release"
-rd /s /q "libc\MINIX Release"
-rd /s /q "libsys\MINIX Release"
-rd /s /q "libcurses\MINIX Release"
-rd /s /q "libeditline\MINIX Release"
-rd /s /q "libtimers\MINIX Release"
-rd /s /q "libutil\MINIX Release"
+rd /s /q "lib\c\MINIX Release"
+rd /s /q "lib\sys\MINIX Release"
+rd /s /q "lib\curses\MINIX Release"
+rd /s /q "lib\editline\MINIX Release"
+rd /s /q "lib\timers\MINIX Release"
+rd /s /q "lib\util\MINIX Release"
 rd /s /q "mfs\MINIX Release"
 rd /s /q "dec21140A\MINIX Release"
 rd /s /q "msh\MINIX Release"

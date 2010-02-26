@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="libc"
+	Name="lib_c"
 	ProjectGUID="{CB10FB13-7E83-499E-BCC4-A77F84833E7B}"
-	RootNamespace="libc"
+	RootNamespace="lib_c"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>

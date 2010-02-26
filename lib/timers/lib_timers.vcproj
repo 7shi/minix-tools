@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="libtimers"
+	Name="lib_timers"
 	ProjectGUID="{A144D173-F43A-4543-A047-AEB676A17A14}"
-	RootNamespace="libtimers"
+	RootNamespace="lib_timers"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>

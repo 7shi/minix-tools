@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="libsys"
+	Name="lib_sys"
 	ProjectGUID="{4BBE7934-C4C7-4961-A1E8-2B1DCF3BBE63}"
-	RootNamespace="libsys"
+	RootNamespace="lib_sys"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
