@@ -1418,7 +1418,7 @@
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="$(SolutionDir)"
+						AdditionalIncludeDirectories="$(SolutionDir)\servers"
 					/>
 				</FileConfiguration>
 			</File>
@@ -1430,7 +1430,7 @@
 					>
 					<Tool
 						Name="VCCLCompilerTool"
-						AdditionalIncludeDirectories="$(SolutionDir)"
+						AdditionalIncludeDirectories="$(SolutionDir)\servers"
 					/>
 				</FileConfiguration>
 			</File>
@@ -2091,7 +2091,7 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 					/>
 				</FileConfiguration>
@@ -2104,7 +2104,7 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 					/>
 				</FileConfiguration>

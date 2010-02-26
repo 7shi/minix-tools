@@ -2,9 +2,9 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="mfs"
+	Name="srv_mfs"
 	ProjectGUID="{DC9BDDDA-20EB-4A93-85EF-ED433805190C}"
-	RootNamespace="mfs"
+	RootNamespace="srv_mfs"
 	Keyword="Win32Proj"
 	TargetFrameworkVersion="196613"
 	>
@@ -29,7 +29,7 @@
 				Name="VCCustomBuildTool"
 				Description="PE ‚©‚ç a.out ‚É•ÏŠ·‚µ‚Ä‚¢‚Ü‚·B"
 				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; &quot;$(TargetPath)&quot;&#x0D;&#x0A;"
-				Outputs="$(OutDir)\$(ProjectName)"
+				Outputs="$(OutDir)\$(TargetName)"
 			/>
 			<Tool
 				Name="VCXMLDataGeneratorTool"
@@ -62,6 +62,7 @@
 			<Tool
 				Name="VCLinkerTool"
 				AdditionalOptions="/ALIGN:512 &quot;$(TargetDir)crtso.o&quot;"
+				OutputFile="$(OutDir)\mfs.exe"
 				GenerateManifest="false"
 				IgnoreAllDefaultLibraries="true"
 				GenerateMapFile="true"
