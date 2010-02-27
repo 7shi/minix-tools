@@ -81,8 +81,12 @@ typedef struct acc
 #endif
 } acc_t;
 
+#ifdef BUF_TEMPORARY_ACC
 extern acc_t *bf_temporary_acc;
+#endif
+#ifdef BUF_LINKCHECK_ACC
 extern acc_t *bf_linkcheck_acc;
+#endif
 
 /* For debugging... */
 
@@ -227,9 +231,14 @@ int bf_linkcheck ARGS(( acc_t *acc ));
  * the underlying buffer.
  */
 
+#ifdef BUF_TEMPORARY_ACC
 #define ptr2acc_data(/* acc_t * */ a) (bf_temporary_acc=(a), \
 	(&bf_temporary_acc->acc_buffer->buf_data_p[bf_temporary_acc-> \
 		acc_offset]))
+#else
+#define ptr2acc_data(/* acc_t * */ a) \
+	(&(a)->acc_buffer->buf_data_p[(a)->acc_offset])
+#endif
 
 #define bf_chkbuf(buf) ((buf)? (compare((buf)->acc_linkC,>,0), \
 	compare((buf)->acc_buffer, !=, 0), \

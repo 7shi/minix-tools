@@ -84,8 +84,12 @@ PRIVATE bf_freereq_t freereq[CLIENT_NR];
 PRIVATE size_t bf_buf_gran;
 
 PUBLIC size_t bf_free_bufsize;
+#ifdef BUF_TEMPORARY_ACC
 PUBLIC acc_t *bf_temporary_acc;
+#endif
+#ifdef BUF_LINKCHECK_ACC
 PUBLIC acc_t *bf_linkcheck_acc;
+#endif
 
 #ifdef BUF_CONSISTENCY_CHECK
 int inet_buf_debug;
@@ -1169,7 +1173,9 @@ PRIVATE void free_accs()
 
 	DBLOCK(1, printf("free_accs\n"));
 
+#ifdef BUF_LINKCHECK_ACC
 assert(bf_linkcheck(bf_linkcheck_acc));
+#endif
 	for (i=0; !acc_freelist && i<MAX_BUFREQ_PRI; i++)
 	{
 		for (j=0; j<CLIENT_NR; j++)
@@ -1178,9 +1184,11 @@ assert(bf_linkcheck(bf_linkcheck_acc));
 			if (freereq[j])
 			{
 				(*freereq[j])(i);
+#ifdef BUF_LINKCHECK_ACC
 				assert(bf_linkcheck(bf_linkcheck_acc) ||
 					(printf("just called %p\n",
 					freereq[i]),0));
+#endif
 			}
 		}
 	}
