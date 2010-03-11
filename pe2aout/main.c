@@ -9,6 +9,8 @@
 #define OFFSET(a, b) (((char *)(&a->b)) - ((char *)a))
 #define INFO(a, b, c, d, e) printf("%08x: "c"%*.s%s\n", a + OFFSET(b, e), b->e, 9 - d, "", #e)
 
+short click_shift = 0, k_flags = 0;
+
 struct aout
 {
 	struct exec header;
@@ -270,17 +272,21 @@ void write_aout(struct aout *a, const char *buf, int len, const char *src)
 		fwrite(&a->header, sizeof(a->header), 1, f);
 		if (a->textvad > 10)
 		{
-			char jmp[20];
-			jmp[0] = 0xb8;
-			*(int *)&jmp[1] = a->header.a_text + a->header.a_data + a->header.a_bss;
-			jmp[5] = 0xbb;
-			*(int *)&jmp[6] = a->header.a_text;
-			jmp[10] = 0xb9;
-			*(int *)&jmp[11] = A_SYMPOS(a->header);
-			jmp[15] = 0xe9;
-			*(int *)&jmp[16] = entry - 20;
-			fwrite(jmp, 20, 1, f);
-			write_zero(f, a->textvad - 20);
+			char jmp[26];
+			jmp[0] = 0xeb;
+			jmp[1] = 4;
+			*(short *)&jmp[2] = click_shift;
+			*(short *)&jmp[4] = k_flags;
+			jmp[6] = 0xb8;
+			*(int *)&jmp[7] = a->header.a_text + a->header.a_data + a->header.a_bss;
+			jmp[11] = 0xbb;
+			*(int *)&jmp[12] = a->header.a_text;
+			jmp[16] = 0xb9;
+			*(int *)&jmp[17] = A_SYMPOS(a->header);
+			jmp[21] = 0xe9;
+			*(int *)&jmp[22] = entry - sizeof(jmp);
+			fwrite(jmp, sizeof(jmp), 1, f);
+			write_zero(f, a->textvad - sizeof(jmp));
 		}
 		fwrite(&buf[a->textpos], a->textlen, 1, f);
 		write_zero(f, a->header.a_text - a->textlen - a->textvad);
@@ -351,6 +357,16 @@ int main(int argc, char *argv[])
 	{
 		if (strcmp(argv[i], "-p") == 0)
 			parse = 1;
+		else if (strcmp(argv[i], "-c") == 0 && i + 1 < argc)
+		{
+			i++;
+			click_shift = atoi(argv[i]);
+		}
+		else if (strcmp(argv[i], "-k") == 0 && i + 1 < argc)
+		{
+			i++;
+			k_flags = atoi(argv[i]);
+		}
 		else
 		{
 			if (parse)

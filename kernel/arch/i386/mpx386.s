@@ -129,16 +129,6 @@ EXTERN _osfxsr_feature:DWORD, _fpu_presence:DWORD, _ptproc:DWORD
 
 PUBLIC	_MINIX
 _MINIX:
-	jmp	over_flags
-	
-	dw 12
-
-flags:
-
-	dw 01FDh
-	nop
-
-over_flags:
 	movzx	esp, sp
 	push	ebp
 	mov	ebp, esp
