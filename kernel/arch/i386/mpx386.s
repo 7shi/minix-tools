@@ -121,6 +121,7 @@ PUBLIC	_hwint15
 
 PUBLIC	_level0_call
 
+EXTERN __brksize:DWORD, _etext:DWORD, _end:DWORD
 EXTERN _main:NEAR, _irq_handle:NEAR, _sys_call:NEAR, _minix_panic:NEAR
 EXTERN _exception_handler:NEAR, _nmi_watchdog_handler:NEAR, _cstart:NEAR
 EXTERN _gdt:NEAR, _aout:NEAR
@@ -129,6 +130,12 @@ EXTERN _osfxsr_feature:DWORD, _fpu_presence:DWORD, _ptproc:DWORD
 
 PUBLIC	_MINIX
 _MINIX:
+	; hard coded by pe2aout
+	mov __brksize, eax
+	mov _etext, ebx
+	mov _end, ecx
+	mov [ebx], dx
+
 	movzx	esp, sp
 	push	ebp
 	mov	ebp, esp

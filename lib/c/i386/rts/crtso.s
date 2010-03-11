@@ -34,6 +34,7 @@ crtso:
 	mov __brksize, eax
 	mov _etext, ebx
 	mov _end, ecx
+	mov [ebx], dx
 
 	xor     ebp, ebp		; clear for backtrace of core files
 	mov     eax, [esp]		; argc

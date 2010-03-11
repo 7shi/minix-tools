@@ -28,7 +28,7 @@
 			<Tool
 				Name="VCCustomBuildTool"
 				Description="PE ‚©‚ç a.out ‚É•ÏŠ·‚µ‚Ä‚¢‚Ü‚·B"
-				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; -c 12 -k 509 &quot;$(TargetPath)&quot;&#x0D;&#x0A;"
+				CommandLine="&quot;$(SolutionDir)Debug\pe2aout&quot; -c 12 -k 509 -m 21103 &quot;$(TargetPath)&quot;&#x0D;&#x0A;"
 				Outputs="$(OutDir)\$(TargetName)"
 			/>
 			<Tool
