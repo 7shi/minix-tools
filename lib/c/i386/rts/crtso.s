@@ -24,13 +24,16 @@ I386_PAGE_SIZE=4096
 ;begbss:
 
 ;.define crtso, __penviron, __penvp, __fpu_present
-PUBLIC crtso, __penviron
+PUBLIC crtso, __penviron, _etext, _end
 ;.define __minix_datastart, __minix_mainjump, __minix_unmapzero
 EXTERN _main:NEAR, _exit:NEAR
 EXTERN _munmap_text:NEAR, _munmap:NEAR, _environ:DWORD, __brksize:DWORD
 .CODE
 crtso:
-	mov __brksize, eax	; hard coded by pe2aout
+	; hard coded by pe2aout
+	mov __brksize, eax
+	mov _etext, ebx
+	mov _end, ecx
 
 	xor     ebp, ebp		; clear for backtrace of core files
 	mov     eax, [esp]		; argc
@@ -99,6 +102,8 @@ __minix_mainjump:
 .DATA
 _minix_datastart DWORD 0
 __penviron DWORD 0			; Pointer to environ, or hidden pointer
+_etext DWORD 0
+_end DWORD 0
 
 .DATA?
 ;	.comm	__penvp, 4		; Hidden environment vector
