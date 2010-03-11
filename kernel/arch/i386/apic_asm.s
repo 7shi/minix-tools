@@ -95,7 +95,7 @@ apic_hwint MACRO irq
 	push	irq
 	call	_irq_handle
 	add	esp, 4
-	mov	eax, [_lapic_eoi_addr]
+	mov	eax, _lapic_eoi_addr
 	mov	dword ptr[eax], 0
 	jmp	_restart
 _0:

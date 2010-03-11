@@ -124,7 +124,7 @@ PUBLIC	_level0_call
 EXTERN __brksize:DWORD, _etext:DWORD, _end:DWORD
 EXTERN _main:NEAR, _irq_handle:NEAR, _sys_call:NEAR, _minix_panic:NEAR
 EXTERN _exception_handler:NEAR, _nmi_watchdog_handler:NEAR, _cstart:NEAR
-EXTERN _gdt:NEAR, _aout:NEAR
+EXTERN _gdt:NEAR, _aout:DWORD
 EXTERN _mon_return:DWORD, _mon_sp:DWORD
 EXTERN _osfxsr_feature:DWORD, _fpu_presence:DWORD, _ptproc:DWORD
 
@@ -148,7 +148,7 @@ noret:
 	mov	_mon_sp, esp
 
 	sgdt	fword ptr [_gdt+8]
-	mov	esi, [_gdt+10]
+	mov	esi, dword ptr [_gdt+10]
 	mov	ebx, _gdt
 	mov	ecx, 64
 copygdt:
@@ -157,22 +157,22 @@ copygdt:
 	inc	esi
 	inc	ebx
 	loop	copygdt
-	mov	eax, [_gdt+26]
+	mov	eax, dword ptr [_gdt+26]
 	and	eax, 00FFFFFFh
 	add	eax, _gdt
-	mov	dword ptr[_gdt+10], eax
+	mov	dword ptr [_gdt+10], eax
 	lgdt	fword ptr [_gdt+8]
 
 	mov	ebx, 8[ebp]
 	mov	edx, 12[ebp]
 	mov	eax, 16[ebp]
-	mov	dword ptr [_aout], eax
+	mov	_aout, eax
 	mov	ax, ds
 	mov	es, ax
 	mov	fs, ax
 	mov	gs, ax
 	mov	ss, ax
-	mov	esp, _k_boot_stktop
+	mov esp, offset _k_boot_stktop
 
 	mov	_params_size, edx
 	mov	_params_offset, ebx
