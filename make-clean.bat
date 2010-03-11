@@ -14,6 +14,7 @@ del servers\ds\srv_ds.vcproj.*.user
 del servers\hgfs\srv_hgfs.vcproj.*.user
 del servers\inet\srv_inet.vcproj.*.user
 del servers\init\srv_init.vcproj.*.user
+del servers\ipc\srv_ipc.vcproj.*.user
 del drivers\dec21140A\drv_dec21140A.vcproj.*.user
 del commands\msh\cmd_msh.vcproj.*.user
 del commands\sh\cmd_sh.vcproj.*.user
@@ -42,6 +43,7 @@ rd /s /q "servers\ds\MINIX Release"
 rd /s /q "servers\hgfs\MINIX Release"
 rd /s /q "servers\inet\MINIX Release"
 rd /s /q "servers\init\MINIX Release"
+rd /s /q "servers\ipc\MINIX Release"
 rd /s /q "drivers\dec21140A\MINIX Release"
 rd /s /q "commands\msh\MINIX Release"
 rd /s /q "commands\sh\MINIX Release"
