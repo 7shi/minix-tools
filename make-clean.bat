@@ -9,6 +9,7 @@ del lib\curses\lib_curses.vcproj.*.user
 del lib\editline\lib_editline.vcproj.*.user
 del lib\timers\lib_timers.vcproj.*.user
 del lib\util\lib_util.vcproj.*.user
+del kernel\kernel.vcproj.*.user
 del servers\mfs\srv_mfs.vcproj.*.user
 del servers\ds\srv_ds.vcproj.*.user
 del servers\hgfs\srv_hgfs.vcproj.*.user
@@ -39,6 +40,7 @@ rd /s /q "lib\curses\MINIX Release"
 rd /s /q "lib\editline\MINIX Release"
 rd /s /q "lib\timers\MINIX Release"
 rd /s /q "lib\util\MINIX Release"
+rd /s /q "kernel\MINIX Release"
 rd /s /q "servers\mfs\MINIX Release"
 rd /s /q "servers\ds\MINIX Release"
 rd /s /q "servers\hgfs\MINIX Release"
