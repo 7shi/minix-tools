@@ -44,7 +44,7 @@
 				Optimization="2"
 				EnableIntrinsicFunctions="true"
 				AdditionalIncludeDirectories="$(SolutionDir)include"
-				PreprocessorDefinitions="_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
+				PreprocessorDefinitions="__STDC__=1,_MINIX,__minix,_EM_WSIZE=4,__LONG_LONG_SUPPORTED,_ANSI"
 				IgnoreStandardIncludePath="true"
 				RuntimeLibrary="2"
 				BufferSecurityCheck="false"
@@ -505,7 +505,7 @@
 					>
 					<Tool
 						Name="VCCustomBuildTool"
-						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;"
+						CommandLine="ml /c /nologo /coff /Zi /Fo&quot;$(ProjectDir)$(IntDir)\asm-$(InputName).obj&quot; &quot;$(InputPath)&quot;&#x0D;&#x0A;"
 						Outputs="$(ProjectDir)$(IntDir)\asm-$(InputName).obj"
 					/>
 				</FileConfiguration>
